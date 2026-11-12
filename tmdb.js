@@ -1,5 +1,4 @@
 // tmdb.js : TMDB now_playing 응답
-// tmdb.js : TMDB now_playing 응답
 // ===== Part C =====
 const TMDB = 
     {
