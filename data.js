@@ -1,108 +1,256 @@
-const titles = [
-    "하울의 움직이는 섬",
-    "승리호",
-    "박스트롤",
-    "지상 최대의 쇼",
-    "오디세이",
+// ===== Part A =====
+// A1.
+let sumA = 0;
 
-    // 박스 오피스 1~5
-    "극장판 치이카와: 인어 섬의 비밀",
-    "하트 오브 비스트",
-    "최종면접",
-    "명탐정 코난: 30호 살인 사건",
-    "암살자(들)"
-];
+for (let i = 0; i < ratings.length; i++) {
+    sumA += ratings[i];
+}
 
-const years = [
-    2004,
-    2021,
-    2014,
-    2017,
-    2026,
-
-    2026,
-    2026,
-    2026,
-    2026,
-    2026
-];
-
-const ratings = [
-    8.2,
-    8.4,
-    8.2,
-    6.9,
-    8.3,
-
-    7.1,
-    7.2,
-    8.0,
-    7.0,
-    7.5
-];
-
-const audiences = [
-    0,
-    0,
-    0,
-    0,
-    0,
-
-    2797524,
-    389837,
-    179066,
-    115609,
-    3478353
-];
+console.log("A1 평균 평점: " + sumA / ratings.length);
 
 
+// A2. 
+let maxA = 0;
+
+for (let i = 0; i < movies.length; i++) {
+    if (movies[i].rating > movies[maxA].rating) {
+        maxA = i;
+    }
+}
+
+console.log(
+    "A2 최고 평점: " +
+    movies[maxA].title + " " +
+    movies[maxA].rating
+);
 
 
-// Part B : 영화 객체 10건
-const movies = [
-    // 내 인생 영화
-    {
-        title: "하울의 움직이는 섬", year: 2026, date: "2026-09-30", rating: 7.4,
-        audience: 0, poster: "/rVOll8XOde5BuIF4tGO1q0pfngQ.jpg", type: "mine", rank: null
-    },
-    {
-        title: "너의 이름은", year: 2016, date: "2016-07-01", rating: 8.4,
-        audience: 0, poster: "/2DJCufz3Oa703PbLjNX1pM6MCG2.jpg", type: "mine", rank: null
-    },
-    {
-        title: "엔드 오브 에반게리온", year: 1997, date: "1997-07-19", rating: 8.2,
-        audience: 0, poster: "/AfyuI3glMCBDFmNPj9PY6DwbgGp.jpg", type: "mine", rank: null
-    },
-    {
-        title: "명탐정 코난: 100만 달러의 펜타그램 포스터", year: 2024, date: "2024-04-12", rating: 6.9,
-        audience: 0, poster: "/4TMkOnI6rCYxqD059aeeQSBv5mc.jpg", type: "mine", rank: null
-    },
-    {
-        title: "모노노케 히메", year: 1997, date: "1997-07-12", rating: 8.3,
-        audience: 0, poster: "/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg", type: "mine", rank: null
-    },
+// A3
+let countA = 0;
+
+for (let i = 0; i < movies.length; i++) {
+    if (movies[i].rating >= 8) {
+        countA++;
+    }
+}
+
+console.log("A3 8점 이상: " + countA + "편");
 
 
-    // 박스 오피스 1~5
-    {
-        title: "극장판 치이카와: 인어 섬의 비밀", year: 2026, date: "2026-09-30", rating: 7.4,
-        audience: 23394977, poster: "/rVOll8XOde5BuIF4tGO1q0pfngQ.jpg", type: "boxoffice", rank: 1
-    },
-    {
-        title: "암살자(들)", year: 2026, date: "2026-09-23", rating: 7.2,
-        audience: 3382132, poster: "/c55ijsOdntj6P25vDwHLdgsBpmV.jpg", type: "boxoffice", rank: 2
-    },
-    {
-        title: "실낙원", year: 2026, date: "2026-10-21", rating: 8.0,
-        audience: 112193, poster: "wkm9BQLok7U2KihcCspCa663Qse.jpg", type: "boxoffice", rank: 3
-    },
-    {
-        title: "타짜: 벨제붑의 노래", year: 2026, date: "2026-09-23", rating: 7.0,
-        audience: 2006488, poster: "/w5OX3u2SpMVRU0sol0mtIaf4LSI.jpg", type: "boxoffice", rank: 4
-    },
-    {
-        title: "클레이페이스", year: 2026, date: "2026-10-19", rating: 7.5,
-        audience: 84051, poster: "/LSGpoSAlitss0KOvVakkeUToZo.jpg", type: "boxoffice", rank: 5
-    },
+// A4
+let count2020 = 0;
+let count2010 = 0;
+let count2000 = 0;
+let countBefore = 0;
 
-];
+for (let i = 0; i < movies.length; i++) {
+    const decade = movies[i].year - (movies[i].year % 10);
+
+    switch (decade) {
+        case 2020:
+            count2020++;
+            break;
+
+        case 2010:
+            count2010++;
+            break;
+
+        case 2000:
+            count2000++;
+            break;
+
+        default:
+            countBefore++;
+    }
+}
+
+console.log(
+    "A4 2020년대 " + count2020 + "편, " +
+    "2010년대 " + count2010 + "편, " +
+    "2000년대 " + count2000 + "편, " +
+    "그 이전 " + countBefore + "편"
+);
+
+
+// A5
+let bigA = "";
+
+for (let i = 0; i < audiences.length; i++) {
+    if (audiences[i] >= 1000000) {
+        if (bigA !== "") {
+            bigA += " ";
+        }
+
+        bigA += titles[i];
+    }
+}
+
+if (bigA === "") {
+    bigA = "없음";
+}
+
+console.log("A5 관객 100만 이상: " + bigA);
+
+
+
+
+// ===== Part B =====
+// 배열을 영화 객체로 합치기
+for (let i = 0; i < titles.length; i++) {
+    movies.push({
+        title: titles[i],
+        year: years[i],
+        rating: ratings[i],
+        audience: audiences[i]
+    });
+}
+
+
+// 1
+function average(list) {
+    let sum = 0;
+
+    for (let i = 0; i < list.length; i++) {
+        sum += list[i].rating;
+    }
+
+    return sum / list.length;
+}
+
+
+// 2
+function best(list) {
+    let result = list[0];
+
+    for (let i = 1; i < list.length; i++) {
+        if (list[i].rating > result.rating) {
+            result = list[i];
+        }
+    }
+
+    return result;
+}
+
+
+// 3
+function filterByRating(list, min) {
+    return list.filter(m => m.rating >= min);
+}
+
+
+// 4
+function sortBy(list, key, desc) {
+    const result = [...list];
+
+    result.sort((a, b) => {
+        let value;
+
+        if (typeof a[key] === "string") {
+            value = a[key].localeCompare(b[key]);
+        } else {
+            value = a[key] - b[key];
+        }
+
+        const sign = desc ? -1 : 1;
+
+        return value * sign;
+    });
+
+    return result;
+}
+
+
+// 5
+function search(list, keyword) {
+    const word = keyword.trim().toLowerCase();
+
+    return list.filter(m =>
+        m.title.toLowerCase().includes(word)
+    );
+}
+
+
+// 6
+function formatNumber(n) {
+    return Number(n).toLocaleString("ko-KR");
+}
+
+//7
+function yearsSince(dateStr) {
+    const date = new Date(dateStr);
+    const today = new Date();
+
+    let year = today.getFullYear() - date.getFullYear();
+
+    if (
+        today.getMonth() < date.getMonth() ||
+        (today.getMonth() === date.getMonth() &&
+         today.getDate() < date.getDate())
+    ) {
+        year--;
+    }
+
+    return year;
+}
+
+
+
+const bestMovie = best(movies);
+const topAudience = sortBy(movies, "audience", true)[0];
+
+const line1 = "평균 평점: " + average(movies).toFixed(1);
+
+const line2 = "최고 평점: " + bestMovie.title +
+    " (" + bestMovie.rating + "점, 개봉한 지 " +
+    yearsSince(bestMovie.year + "-01-01") + "년)";
+
+const line3 = "관객 1위: " + topAudience.title +
+    " (누적 " + formatNumber(topAudience.audience) + "명)";
+
+    document.getElementById("out").textContent = line1 + "\n" + line2 + "\n" + line3;
+
+
+
+// ===== Part C =====
+// 영화 목록 가져오기
+function getList(data) {
+    return data.results;
+}
+
+// 평균 평점 계산하기
+function averageBy(list, key) {
+    let sum = 0;
+
+    for (let i = 0; i < list.length; i++) {
+        sum += list[i][key];
+    }
+
+    return sum / list.length;
+}
+
+
+// C1
+console.log(
+    "C1",
+    "page " + TMDB.page + ",",
+    "total_pages " + TMDB.total_pages + ",",
+    "total_results " + TMDB.total_results + ",",
+    "이번 응답 " + getList(TMDB).length + "편"
+);
+
+// C2
+console.log(
+    "C2 상영작 평균 평점: " +
+    averageBy(getList(TMDB), "vote_average").toFixed(1)
+);
+
+// C3
+console.log(
+    "C4 'The Furious' 검색: " + search(getList(TMDB), "The Furious").length + "편"
+);
+
+// C4
+console.table(
+    sortBy(getList(TMDB), "vote_average", true).slice(0, 5),
+    ["title", "release_date", "vote_average"]
+);
