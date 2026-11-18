@@ -6,6 +6,7 @@ const TMDB =
         "maximum": "2026-11-11",
             "minimum": "2026-09-30"
     },
+        
     "page": 1,
         "results": [
             {
@@ -25,6 +26,7 @@ const TMDB =
                 "vote_average": 7.3,
                 "vote_count": 532
             },
+        
             {
                 "adult": false,
                 "backdrop_path": "/cKetrF2dAnQ0AMV5i4BMOs41I5P.jpg",
@@ -42,6 +44,7 @@ const TMDB =
                 "vote_average": 7.008,
                 "vote_count": 653
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/nGau0KBOaRILSK5MqFcuTfv7GMl.jpg",
@@ -59,6 +62,7 @@ const TMDB =
                 "vote_average": 7.278,
                 "vote_count": 760
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/uL4cIrNi2uaUnWIOQQ28EVnkETG.jpg",
@@ -76,6 +80,7 @@ const TMDB =
                 "vote_average": 7.4,
                 "vote_count": 409
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
@@ -93,6 +98,7 @@ const TMDB =
                 "vote_average": 8.099,
                 "vote_count": 106
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/9y9o686DsQg0KzPtERzcW7Cf8IE.jpg",
@@ -110,6 +116,7 @@ const TMDB =
                 "vote_average": 7,
                 "vote_count": 18
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/qRN8eqYwG6HPSy0i3fKzuLrUOhp.jpg",
@@ -127,6 +134,7 @@ const TMDB =
                 "vote_average": 6.3,
                 "vote_count": 224
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/tIcONOFK9D3F89ETK8DBS1hIwVF.jpg",
@@ -144,6 +152,7 @@ const TMDB =
                 "vote_average": 7.278,
                 "vote_count": 158
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/xzm3RfWh932rS28WErNC3u8qzVm.jpg",
@@ -161,6 +170,7 @@ const TMDB =
                 "vote_average": 8,
                 "vote_count": 5
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/vC5IxhgO6cVmw9O4QgkraRzfHvh.jpg",
@@ -178,6 +188,7 @@ const TMDB =
                 "vote_average": 7.494,
                 "vote_count": 508
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/shW2jHkQLZVv4Fko2rJDqTGU0gx.jpg",
@@ -195,6 +206,7 @@ const TMDB =
                 "vote_average": 6.56,
                 "vote_count": 142
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/oveb9ughaDh4GkjmVHvSgFnEzlM.jpg",
@@ -212,6 +224,7 @@ const TMDB =
                 "vote_average": 7,
                 "vote_count": 2
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/i0eR9O1FnCgBm1cH8WwqxGbAXMS.jpg",
@@ -229,6 +242,7 @@ const TMDB =
                 "vote_average": 8.229,
                 "vote_count": 894
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/mG8tVv1RPAKnARWxKTND5dRgMpw.jpg",
@@ -246,6 +260,7 @@ const TMDB =
                 "vote_average": 7.3,
                 "vote_count": 59
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/kiDd05NykJBIoEvJPSG5SOd7qc6.jpg",
@@ -263,6 +278,7 @@ const TMDB =
                 "vote_average": 3.125,
                 "vote_count": 4
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/7y8zWGEjs7tresw4Hzkkf4TdkcL.jpg",
@@ -280,6 +296,7 @@ const TMDB =
                 "vote_average": 6.839,
                 "vote_count": 649
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/lSd6nEnlaeQkswLLUgHC5gyuXyU.jpg",
@@ -297,6 +314,7 @@ const TMDB =
                 "vote_average": 5.9,
                 "vote_count": 47
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/wPSOPYy2fV62GjeXpVdKyweZGZu.jpg",
@@ -314,6 +332,7 @@ const TMDB =
                 "vote_average": 6.206,
                 "vote_count": 17
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/29pJrsosphUdOMRDm4gCdhSkluI.jpg",
@@ -331,6 +350,7 @@ const TMDB =
                 "vote_average": 8.223,
                 "vote_count": 264
             },
+            
             {
                 "adult": false,
                 "backdrop_path": "/jKdHxWejHdJaxDVcQFoXLoQ2jVL.jpg",
